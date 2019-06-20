@@ -75,7 +75,7 @@ RSpec.describe Mackerel::Client do
 
     let(:dashboard) { 
       {
-				'id' => id,
+        'id' => id,
         'title' => title,
         'bodyMarkdown' => bodyMarkdown,
         'urlPath' => urlPath,
@@ -125,7 +125,7 @@ RSpec.describe Mackerel::Client do
     let(:dashboards) { 
       [
         {
-  				'id' => id,
+          'id' => id,
           'title' => title,
           'bodyMarkdown' => bodyMarkdown,
           'urlPath' => urlPath,
@@ -173,14 +173,14 @@ RSpec.describe Mackerel::Client do
     let(:urlPath) { 'Hoge' }
 
     let(:dashboard) { 
-			{
-				'id' => id,
-				'title' => title,
-				'bodyMarkdown' => bodyMarkdown,
-				'urlPath' => urlPath,
-				'createdAt' => 1234567890,
-				'updatedAt' => 1234567891
-			}
+      {
+        'id' => id,
+        'title' => title,
+        'bodyMarkdown' => bodyMarkdown,
+        'urlPath' => urlPath,
+        'createdAt' => 1234567890,
+        'updatedAt' => 1234567891
+      }
     }
 
     let(:response_object) {
@@ -221,14 +221,14 @@ RSpec.describe Mackerel::Client do
     let(:urlPath) { 'Hoge' }
 
     let(:dashboard) { 
-			{
-				'id' => id,
-				'title' => title,
-				'bodyMarkdown' => bodyMarkdown,
-				'urlPath' => urlPath,
-				'createdAt' => 1234567890,
-				'updatedAt' => 1234567891
-			}
+      {
+        'id' => id,
+        'title' => title,
+        'bodyMarkdown' => bodyMarkdown,
+        'urlPath' => urlPath,
+        'createdAt' => 1234567890,
+        'updatedAt' => 1234567891
+      }
     }
 
     let(:response_object) {
