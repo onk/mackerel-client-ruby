@@ -16,18 +16,15 @@ module Mackerel
     def to_json(options = nil)
       return to_h.to_json(options)
     end
-
   end
 
   module REST
     module Organization
-
       def get_organization()
         command = ApiCommand.new(:get, '/api/v0/org', @api_key)
         data = command.execute(client)
         Mackerel::Organization.new(data)
       end
-
     end
   end
 end

@@ -3,7 +3,6 @@ RSpec.describe Mackerel::Client do
   let(:client) { Mackerel::Client.new(:mackerel_api_key => api_key) }
 
   describe '#post_invitation' do
-
     let(:api_path) { "/api/v0/invitations" }
     let(:stubbed_response) {
       [
@@ -43,8 +42,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
-
   describe '#revoke_invitation' do
     let(:stubbed_response) {
       [
@@ -66,7 +63,7 @@ RSpec.describe Mackerel::Client do
     let(:email) { "example@example.com" }
     let(:api_path) { "/api/v0/invitations/revoke" }
 
-    let(:invitation) { 
+    let(:invitation) {
       {
         "email" => email,
         "authority" => "viewer",
@@ -85,5 +82,4 @@ RSpec.describe Mackerel::Client do
       expect(client.revoke_invitation(email)).to eq(invitation.merge({ "expiresAt" => 1492393387 }))
     end
   end
-
 end

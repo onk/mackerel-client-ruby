@@ -46,6 +46,7 @@ module Mackerel
     end
 
     private
+
     ERROR_MESSAGE_FOR_API_KEY_ABSENCE = "API key is absent."
 
     def client

@@ -25,7 +25,7 @@ RSpec.describe Mackerel::Client do
     let(:bodyMarkdown) { '#HogeHoge' }
     let(:urlPath) { 'Hoge' }
 
-    let(:dashboard) { 
+    let(:dashboard) {
       {
         'title' => title,
         'bodyMarkdown' => bodyMarkdown,
@@ -47,8 +47,6 @@ RSpec.describe Mackerel::Client do
       expect(client.post_dashboard(title, bodyMarkdown, urlPath).to_h).to eq(response_object)
     end
   end
-
-
 
   describe '#update_dashboard' do
     let(:stubbed_response) {
@@ -73,7 +71,7 @@ RSpec.describe Mackerel::Client do
     let(:bodyMarkdown) { '#HogeHoge' }
     let(:urlPath) { 'Hoge' }
 
-    let(:dashboard) { 
+    let(:dashboard) {
       {
         'id' => id,
         'title' => title,
@@ -96,8 +94,6 @@ RSpec.describe Mackerel::Client do
       expect(client.update_dashboard(id, title, bodyMarkdown, urlPath).to_h).to eq(response_object)
     end
   end
-
-
 
   describe '#get_dashboards' do
     let(:stubbed_response) {
@@ -122,7 +118,7 @@ RSpec.describe Mackerel::Client do
     let(:bodyMarkdown) { '#HogeHoge' }
     let(:urlPath) { 'Hoge' }
 
-    let(:dashboards) { 
+    let(:dashboards) {
       [
         {
           'id' => id,
@@ -148,7 +144,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#get_dashboard' do
     let(:stubbed_response) {
       [
@@ -172,7 +167,7 @@ RSpec.describe Mackerel::Client do
     let(:bodyMarkdown) { '#HogeHoge' }
     let(:urlPath) { 'Hoge' }
 
-    let(:dashboard) { 
+    let(:dashboard) {
       {
         'id' => id,
         'title' => title,
@@ -195,7 +190,6 @@ RSpec.describe Mackerel::Client do
       expect(client.get_dashboard(id).to_h).to eq(response_object)
     end
   end
-
 
   describe '#delete_dashboard' do
     let(:stubbed_response) {
@@ -220,7 +214,7 @@ RSpec.describe Mackerel::Client do
     let(:bodyMarkdown) { '#HogeHoge' }
     let(:urlPath) { 'Hoge' }
 
-    let(:dashboard) { 
+    let(:dashboard) {
       {
         'id' => id,
         'title' => title,
@@ -243,6 +237,4 @@ RSpec.describe Mackerel::Client do
       expect(client.delete_dashboard(id).to_h).to eq(response_object)
     end
   end
-
-
 end

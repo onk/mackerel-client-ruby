@@ -46,7 +46,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#get_graph_annotations' do
     let(:stubbed_response) {
       [
@@ -106,7 +105,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#update_graph_annotation' do
     let(:stubbed_response) {
       [
@@ -153,7 +151,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#delete_graph_annotation' do
     let(:stubbed_response) {
       [
@@ -199,6 +196,4 @@ RSpec.describe Mackerel::Client do
       expect(client.delete_graph_annotation(id).to_h ).to eq(annotation.merge({"id" => id}))
     end
   end
-
-
 end

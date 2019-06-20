@@ -3,7 +3,6 @@ RSpec.describe Mackerel::Client do
   let(:client) { Mackerel::Client.new(:mackerel_api_key => api_key) }
 
   describe '#get_organizations' do
-
     let(:api_path) { "/api/v0/org" }
     let(:stubbed_response) {
       [
@@ -21,7 +20,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:organization) { 
+    let(:organization) {
       {
         "name" => "HogeH",
       }
@@ -39,5 +38,4 @@ RSpec.describe Mackerel::Client do
       expect(client.get_organization().to_h).to eq(organization)
     end
   end
-
 end

@@ -3,7 +3,6 @@ RSpec.describe Mackerel::Client do
   let(:client) { Mackerel::Client.new(:mackerel_api_key => api_key) }
 
   describe '#get_services' do
-
     let(:api_path) { "/api/v0/services" }
     let(:stubbed_response) {
       [
@@ -21,7 +20,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:services) { 
+    let(:services) {
       {
         "services" => [
           {
@@ -57,9 +56,7 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#get_roles' do
-
     let(:api_path) { "/api/v0/services/#{serviceName}/roles" }
     let(:stubbed_response) {
       [
@@ -78,7 +75,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:serviceName) { "WebSite" }
-    let(:roles) { 
+    let(:roles) {
       {
         "roles" => [
           {
@@ -106,9 +103,7 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#get_service_metric_names' do
-
     let(:api_path) { "/api/v0/services/#{serviceName}/metric-names" }
     let(:stubbed_response) {
       [
@@ -127,7 +122,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:serviceName) { "WebSite" }
-    let(:metricNames) { 
+    let(:metricNames) {
       {
         "names" => [
             "CPU","Memory","Filesystem"
@@ -147,5 +142,4 @@ RSpec.describe Mackerel::Client do
       expect(client.get_service_metric_names(serviceName)).to eq(metricNames['names'])
     end
   end
-
 end

@@ -1,7 +1,5 @@
 module Mackerel
-
   class Service
-
     attr_accessor :name, :memo, :roles
 
     def initialize(args = {})
@@ -21,12 +19,10 @@ module Mackerel
     def to_json(options = nil)
       return to_h.to_json(options)
     end
-
   end
 
   module REST
     module Service
-
       def get_services()
         command = ApiCommand.new(:get, '/api/v0/services', @api_key)
         data = command.execute(client)
@@ -44,8 +40,6 @@ module Mackerel
         data = command.execute(client)
         data['names']
       end
-
     end
   end
 end
-

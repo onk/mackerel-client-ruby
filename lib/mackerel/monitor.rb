@@ -1,7 +1,5 @@
 module Mackerel
-
   class Monitor
-
     attr_accessor :id, :type, :name, :duration, :metric, :url, :service, :maxCheckAttempts, :operator, :warning, :critical, :responseTimeWarning, :responseTimeCritical, :responseTimeDuration, :certificationExpirationWarning, :certificationExpirationCritical, :containsString, :expression, :notificationInterval, :scopes, :excludeScopes, :isMute
 
     def initialize(args = {})
@@ -40,12 +38,10 @@ module Mackerel
     def to_json(options = nil)
       return to_h.to_json(options)
     end
-
   end
 
   module REST
     module Monitor
-
       def post_monitor(monitor)
         command = ApiCommand.new(:post, '/api/v0/monitors', @api_key)
         command.body = monitor.to_json

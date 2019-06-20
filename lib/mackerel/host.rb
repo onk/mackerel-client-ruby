@@ -1,7 +1,5 @@
 module Mackerel
-
   class Host
-
     MACKEREL_INTERFACE_NAME_PATTERN = /^eth\d/
     attr_accessor :name, :type, :status, :memo, :isRetired, :id, :createdAt, :roles, :interfaces, :customIdentifier
 
@@ -41,7 +39,6 @@ module Mackerel
 
   module REST
     module Host
-
       def post_host(host)
         command = ApiCommand.new(:post, "/api/v0/hosts", @api_key)
         command.body = host.to_json

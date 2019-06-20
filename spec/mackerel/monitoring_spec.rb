@@ -63,5 +63,4 @@ RSpec.describe Mackerel::Client do
       expect(client.post_monitoring_check_report(reports)).to eq(response_object)
     end
   end
-
 end

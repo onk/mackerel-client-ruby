@@ -61,10 +61,7 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
-
   describe '#get_notification_groups' do
-
     let(:api_path) { "/api/v0/notification-groups" }
     let(:stubbed_response) {
       [
@@ -82,7 +79,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:notificationGroups) { 
+    let(:notificationGroups) {
       {
         "notificationGroups" => [
           {
@@ -193,7 +190,6 @@ RSpec.describe Mackerel::Client do
       }
     }
 
-
     let(:response_object) {
       notificationGroup.merge({ "id" => notificationGroupId })
     }
@@ -206,7 +202,6 @@ RSpec.describe Mackerel::Client do
       expect(client.update_notification_group(notificationGroupId, notificationGroup).to_h ).to eq(notificationGroup.merge({"id" => notificationGroupId}))
     end
   end
-
 
   describe '#delete_notification_group' do
     let(:stubbed_response) {
@@ -265,6 +260,4 @@ RSpec.describe Mackerel::Client do
       expect(client.delete_notification_group(notificationGroupId).to_h ).to eq(notificationGroup.merge({"id" => notificationGroupId}))
     end
   end
-
-
 end

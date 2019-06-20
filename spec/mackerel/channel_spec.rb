@@ -3,7 +3,6 @@ RSpec.describe Mackerel::Client do
   let(:client) { Mackerel::Client.new(:mackerel_api_key => api_key) }
 
   describe '#get_channels' do
-
     let(:api_path) { "/api/v0/channels" }
     let(:stubbed_response) {
       [
@@ -21,7 +20,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:channels) { 
+    let(:channels) {
       {
         "channels" => [
           { "id" => "361DhijkGFS" , "name" => "Default", "type" => "email" },
@@ -42,5 +41,4 @@ RSpec.describe Mackerel::Client do
       expect(client.get_channels().map(&:to_h)).to eq(channels['channels'])
     end
   end
-
 end

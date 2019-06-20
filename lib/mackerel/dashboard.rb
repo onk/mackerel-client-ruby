@@ -1,5 +1,4 @@
 module Mackerel
-
   class Dashboard
     attr_accessor :id, :title, :bodyMarkdown, :urlPath, :createdAt, :updatedAt
     def initialize(args = {})
@@ -22,7 +21,6 @@ module Mackerel
     def to_json(options = nil)
       return to_h.to_json(options)
     end
-
   end
 
   module REST

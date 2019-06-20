@@ -26,4 +26,3 @@ pp mc.update_dashboard(target_dashboard.id, new_title, markdown, urlPath)
 
 # Delete the dashboard
 pp mc.delete_dashboard(target_dashboard.id)
-

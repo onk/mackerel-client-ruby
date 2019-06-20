@@ -50,7 +50,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#close_alert' do
     let(:stubbed_response) {
       [
@@ -95,5 +94,4 @@ RSpec.describe Mackerel::Client do
       expect(client.close_alert(alertId, reason).to_h).to eq(alert)
     end
   end
-
 end

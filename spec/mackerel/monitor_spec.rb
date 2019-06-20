@@ -210,5 +210,4 @@ RSpec.describe Mackerel::Client do
       expect(client.delete_monitor(monitorId).to_h).to eq(response_object.to_h)
     end
   end
-
 end

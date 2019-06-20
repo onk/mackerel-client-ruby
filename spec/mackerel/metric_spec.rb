@@ -30,7 +30,8 @@ RSpec.describe Mackerel::Client do
     let(:metrics) { [
         { 'hostId' => hostId, 'name' => 'custom.metrics.loadavg', 'time' => 1401537844, 'value' => 1.4 },
         { 'hostId' => hostId, 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ] }
+    ]
+    }
 
     before do
       allow(client).to receive(:http_client).and_return(test_client)
@@ -86,7 +87,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe "#get_latest_metrics" do
     let(:stubbed_response) {
       [
@@ -129,7 +129,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#post_service_metrics' do
     let(:stubbed_response) {
       [
@@ -158,7 +157,8 @@ RSpec.describe Mackerel::Client do
     let(:metrics) { [
         { 'name' => 'custom.metrics.latency', 'time' => 1401537844, 'value' => 0.5 },
         { 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ] }
+    ]
+    }
 
     before do
       allow(client).to receive(:http_client).and_return(test_client)
@@ -168,7 +168,6 @@ RSpec.describe Mackerel::Client do
       expect(client.post_service_metrics(service_name, metrics)).to eq(response_object)
     end
   end
-
 
   describe '#get_service_metrics' do
     let(:stubbed_response) {
@@ -199,7 +198,8 @@ RSpec.describe Mackerel::Client do
     let(:metrics) { [
         { 'name' => 'custom.metrics.loadavg', 'time' => 1401537844, 'value' => 1.4 },
         { 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ] }
+    ]
+    }
 
     before do
       allow(client).to receive(:http_client).and_return(test_client)
@@ -209,7 +209,6 @@ RSpec.describe Mackerel::Client do
       expect(client.get_service_metrics(service_name, name, from, to)).to eq(metrics)
     end
   end
-
 
   describe "#define_graphs" do
     let(:stubbed_response) {
@@ -240,10 +239,10 @@ RSpec.describe Mackerel::Client do
                "displayName" => "CPU user",
                "isStacked" => true
             },
-            { 
+            {
                "name" => "custom.cpu.foo.idle",
                "displayName" => "CPU idle",
-               "isStacked" => true 
+               "isStacked" => true
             }
           ]
         },
@@ -254,7 +253,7 @@ RSpec.describe Mackerel::Client do
           "metrics" => [
             {
               "name" => "custom.wild.#.foo",
-              "displayName" => "wild foo" 
+              "displayName" => "wild foo"
             },
             {
               "name" => "custom.wild.#.bar",
@@ -278,6 +277,4 @@ RSpec.describe Mackerel::Client do
       expect(client.define_graphs(graph_def)).to eq({"success" => true})
     end
   end
-
-
 end

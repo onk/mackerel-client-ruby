@@ -62,6 +62,5 @@ module Mackerel
     def make_escaped_query
       @query.map{|k,v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"}.join("&")
     end
-
   end
 end

@@ -1,6 +1,5 @@
 module Mackerel
-  class Role 
-
+  class Role
     attr_accessor :name, :memo
 
     def initialize(args = {})
@@ -21,4 +20,3 @@ module Mackerel
     end
   end
 end
-

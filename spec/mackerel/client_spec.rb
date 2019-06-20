@@ -50,7 +50,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#update_host' do
     let(:stubbed_response) {
       [
@@ -91,7 +90,6 @@ RSpec.describe Mackerel::Client do
       expect(client.update_host(hostId, host)).to eq(response_object)
     end
   end
-
 
   describe '#get_host' do
     let(:stubbed_response) {
@@ -182,7 +180,6 @@ RSpec.describe Mackerel::Client do
     end
   end
 
-
   describe '#update_host_roles' do
     let(:stubbed_response) {
       [
@@ -222,8 +219,6 @@ RSpec.describe Mackerel::Client do
       expect(client.update_host_roles(hostId, roles)).to eq({'success' => true})
     end
   end
-
-
 
   describe '#retire_host' do
     let(:stubbed_response) {
@@ -305,7 +300,8 @@ RSpec.describe Mackerel::Client do
           },
         ]
       }
-    ] }
+    ]
+    }
 
     before do
       allow(client).to receive(:http_client).and_return(test_client)

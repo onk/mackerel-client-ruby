@@ -49,7 +49,6 @@ pp mc.update_monitor(monitor.id , {
   notificationInterval: 60
 })
 
-
 pp channels = mc.get_channels().first
 
 pp notification_group = mc.post_notification_group(

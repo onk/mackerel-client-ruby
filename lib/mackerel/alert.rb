@@ -1,5 +1,4 @@
 module Mackerel
-
   class Alert
     attr_accessor :id, :status, :monitorId, :type, :hostId, :value, :message, :reason, :openedAt, :closedAt
 

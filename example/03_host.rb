@@ -56,7 +56,7 @@ target_host = hosts.first
 pp mc.get_host(target_host.id)
 pp mc.get_host_metric_names(target_host.id)
 
-# add host metadata 
+# add host metadata
 namespace = "Scenario3"
 pp mc.update_metadata(target_host.id, namespace, "metadata test")
 pp metadata = mc.list_metadata(target_host.id)
@@ -93,5 +93,3 @@ pp mc.update_host(target_host.id,{
 
 # retire the host
 pp mc.retire_host(target_host.id)
-
-

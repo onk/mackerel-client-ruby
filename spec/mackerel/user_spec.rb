@@ -3,7 +3,6 @@ RSpec.describe Mackerel::Client do
   let(:client) { Mackerel::Client.new(:mackerel_api_key => api_key) }
 
   describe '#get_users' do
-
     let(:api_path) { "/api/v0/users" }
     let(:stubbed_response) {
       [
@@ -21,7 +20,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:users) { 
+    let(:users) {
       {
         "users" => [
           {
@@ -52,7 +51,6 @@ RSpec.describe Mackerel::Client do
   end
 
   describe '#remove_users' do
-
     let(:api_path) { "/api/v0/users/#{user_id}" }
     let(:stubbed_response) {
       [
@@ -71,7 +69,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:user_id) { "XhHAo07" }
-    let(:user) { 
+    let(:user) {
       {
         "id" => user_id,
         "screenName" => "WebServer",
@@ -91,5 +89,4 @@ RSpec.describe Mackerel::Client do
       expect(client.remove_user(user_id).to_h).to eq(user)
     end
   end
- 
 end
