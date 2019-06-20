@@ -47,7 +47,7 @@ module Mackerel
         Mackerel::Dashboard.new(data)
       end
 
-      def get_dashboards()
+      def get_dashboards
         command = ApiCommand.new(:get, '/api/v0/dashboards', @api_key)
         data = command.execute(client)
         data['dashboards'].map{ |d| Mackerel::Dashboard.new(d) }

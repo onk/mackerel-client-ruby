@@ -46,7 +46,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get alerts" do
-      expect(client.get_alerts().map(&:to_h)).to eq(alerts)
+      expect(client.get_alerts.map(&:to_h)).to eq(alerts)
     end
   end
 

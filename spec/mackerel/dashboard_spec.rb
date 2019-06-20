@@ -140,7 +140,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get dashboards" do
-      expect(client.get_dashboards().map(&:to_h)).to eq(response_object['dashboards'])
+      expect(client.get_dashboards.map(&:to_h)).to eq(response_object['dashboards'])
     end
   end
 

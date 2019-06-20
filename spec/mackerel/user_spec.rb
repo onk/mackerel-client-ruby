@@ -46,7 +46,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get users" do
-      expect(client.get_users().map(&:to_h)).to eq(users['users'])
+      expect(client.get_users.map(&:to_h)).to eq(users['users'])
     end
   end
 

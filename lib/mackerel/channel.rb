@@ -22,7 +22,7 @@ module Mackerel
 
   module REST
     module Channel
-      def get_channels()
+      def get_channels
         command = ApiCommand.new(:get, '/api/v0/channels', @api_key)
         data = command.execute(client)
         data['channels'].map{|d| Mackerel::Channel.new(d) }

@@ -49,7 +49,7 @@ pp mc.update_monitor(monitor.id , {
   notificationInterval: 60
 })
 
-pp channels = mc.get_channels().first
+pp channels = mc.get_channels.first
 
 pp notification_group = mc.post_notification_group({
   name: "Example notification group",
@@ -91,6 +91,6 @@ pp mc.update_notification_group(notification_group.id,{
   ]
 })
 
-pp mc.get_notification_groups()
+pp mc.get_notification_groups
 mc.delete_notification_group(notification_group.id)
 mc.delete_monitor(monitor.id)

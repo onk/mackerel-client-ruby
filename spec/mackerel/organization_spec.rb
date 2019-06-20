@@ -35,7 +35,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get organization" do
-      expect(client.get_organization().to_h).to eq(organization)
+      expect(client.get_organization.to_h).to eq(organization)
     end
   end
 end

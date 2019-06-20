@@ -110,7 +110,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully find monitors" do
-      expect(client.get_monitors().map{|monitor| monitor.to_h }).to eq(monitors)
+      expect(client.get_monitors.map{|monitor| monitor.to_h }).to eq(monitors)
     end
   end
 

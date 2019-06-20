@@ -49,7 +49,7 @@ module Mackerel
         Mackerel::Monitor.new(data)
       end
 
-      def get_monitors()
+      def get_monitors
         command = ApiCommand.new(:get,'/api/v0/monitors', @api_key)
         data = command.execute(client)
         data['monitors'].map{ |m| Mackerel::Monitor.new(m) }

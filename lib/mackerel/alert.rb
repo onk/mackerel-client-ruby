@@ -30,7 +30,7 @@ module Mackerel
 
   module REST
     module Alert
-      def get_alerts()
+      def get_alerts
         command = ApiCommand.new(:get, "/api/v0/alerts", @api_key)
         data = command.execute(client)
         data["alerts"].map { |a| Mackerel::Alert.new(a) }

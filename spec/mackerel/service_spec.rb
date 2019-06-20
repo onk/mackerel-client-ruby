@@ -52,7 +52,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get services" do
-      expect(client.get_services().map(&:to_h)).to eq(services['services'])
+      expect(client.get_services.map(&:to_h)).to eq(services['services'])
     end
   end
 

@@ -23,7 +23,7 @@ module Mackerel
 
   module REST
     module Service
-      def get_services()
+      def get_services
         command = ApiCommand.new(:get, '/api/v0/services', @api_key)
         data = command.execute(client)
         data['services'].map {|s| Mackerel::Service.new(s) }

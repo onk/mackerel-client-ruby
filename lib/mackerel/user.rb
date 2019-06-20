@@ -22,7 +22,7 @@ module Mackerel
 
   module REST
     module User
-      def get_users()
+      def get_users
         command = ApiCommand.new(:get, '/api/v0/users', @api_key)
         data = command.execute(client)
         data['users'].map{|u| Mackerel::User.new(u)}

@@ -33,7 +33,7 @@ module Mackerel
         Mackerel::NotificationGroup.new(data)
       end
 
-      def get_notification_groups()
+      def get_notification_groups
         command = ApiCommand.new(:get, '/api/v0/notification-groups', @api_key)
         data = command.execute(client)
         data['notificationGroups'].map{|a| Mackerel::NotificationGroup.new(a)}

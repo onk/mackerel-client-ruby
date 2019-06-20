@@ -141,7 +141,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get notification groups" do
-      expect(client.get_notification_groups().map(&:to_h)).to eq(notificationGroups['notificationGroups'])
+      expect(client.get_notification_groups.map(&:to_h)).to eq(notificationGroups['notificationGroups'])
     end
   end
 

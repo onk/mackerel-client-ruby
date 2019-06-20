@@ -5,7 +5,7 @@ RSpec.describe Mackerel::Client do
   describe 'initialization' do
     it 'display an error message when api_key is absent' do
       expected_message = "API key is absent."
-      expect { Mackerel::Client.new() }.to raise_error(expected_message)
+      expect { Mackerel::Client.new }.to raise_error(expected_message)
     end
   end
 

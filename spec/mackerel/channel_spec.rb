@@ -38,7 +38,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully get channels" do
-      expect(client.get_channels().map(&:to_h)).to eq(channels['channels'])
+      expect(client.get_channels.map(&:to_h)).to eq(channels['channels'])
     end
   end
 end
