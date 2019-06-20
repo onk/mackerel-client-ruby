@@ -125,7 +125,7 @@ RSpec.describe Mackerel::Client do
     let(:metricNames) {
       {
         "names" => [
-          "CPU","Memory","Filesystem"
+          "CPU", "Memory", "Filesystem"
         ]
       }
     }

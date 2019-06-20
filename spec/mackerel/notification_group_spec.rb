@@ -49,7 +49,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:response_object) {
-      notificationGroup.merge({'id' => notificationGroupId})
+      notificationGroup.merge({ 'id' => notificationGroupId })
     }
 
     before do
@@ -162,7 +162,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:api_path) { "/api/v0/notification-groups/#{notificationGroupId}"}
+    let(:api_path) { "/api/v0/notification-groups/#{notificationGroupId}" }
     let(:notificationGroupId) { '123abEFabcd' }
     let(:notificationGroup) {
       {
@@ -199,7 +199,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully update notification group" do
-      expect(client.update_notification_group(notificationGroupId, notificationGroup).to_h ).to eq(notificationGroup.merge({"id" => notificationGroupId}))
+      expect(client.update_notification_group(notificationGroupId, notificationGroup).to_h).to eq(notificationGroup.merge({ "id" => notificationGroupId }))
     end
   end
 
@@ -220,7 +220,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:api_path) { "/api/v0/notification-groups/#{notificationGroupId}"}
+    let(:api_path) { "/api/v0/notification-groups/#{notificationGroupId}" }
     let(:notificationGroupId) { '123abEFabcd' }
     let(:notificationGroup) {
       {
@@ -257,7 +257,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully delete notification group" do
-      expect(client.delete_notification_group(notificationGroupId).to_h ).to eq(notificationGroup.merge({"id" => notificationGroupId}))
+      expect(client.delete_notification_group(notificationGroupId).to_h).to eq(notificationGroup.merge({ "id" => notificationGroupId }))
     end
   end
 end

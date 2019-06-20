@@ -70,7 +70,7 @@ RSpec.describe Mackerel::Client do
     let(:alertId) { 'abcdefg' }
     let(:monitorId) { 'hijklmnopqr' }
     let(:reason) { 'Nantonaku' }
-    let(:api_path) { "/api/v0/alerts/#{alertId}/close"}
+    let(:api_path) { "/api/v0/alerts/#{alertId}/close" }
 
     let(:alert) {
       {

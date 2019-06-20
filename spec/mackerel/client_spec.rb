@@ -74,7 +74,7 @@ RSpec.describe Mackerel::Client do
     let(:host) {
       {
         'name' => 'host001',
-        'meta' => {"abcd" => "abcdefghijklmnopqlstu"}
+        'meta' => { "abcd" => "abcdefghijklmnopqlstu" }
       }
     }
 
@@ -96,7 +96,7 @@ RSpec.describe Mackerel::Client do
       [
         200,
         {},
-        JSON.dump({'host' => host.to_h})
+        JSON.dump({ 'host' => host.to_h })
       ]
     }
 
@@ -208,7 +208,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:response_object) {
-      { 'success' => true}
+      { 'success' => true }
     }
 
     before do
@@ -216,7 +216,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully update host" do
-      expect(client.update_host_roles(hostId, roles)).to eq({'success' => true})
+      expect(client.update_host_roles(hostId, roles)).to eq({ 'success' => true })
     end
   end
 

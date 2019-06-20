@@ -37,7 +37,7 @@ pp mc.post_monitor({
 })
 pp monitor = mc.get_monitors.first
 
-pp mc.update_monitor(monitor.id , {
+pp mc.update_monitor(monitor.id, {
   type: "host",
   name: "custom.define_graph.example",
   memo: "This is monitor test.",
@@ -71,7 +71,7 @@ pp notification_group = mc.post_notification_group({
   ]
 })
 
-pp mc.update_notification_group(notification_group.id,{
+pp mc.update_notification_group(notification_group.id, {
   name: "Example notification group(updated)",
   notificationLevel: "all",
   childNotificationGroupIds: [],

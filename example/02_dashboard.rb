@@ -20,7 +20,7 @@ pp mc.post_dashboard(title, markdown, urlPath)
 # Update the dashboard
 new_title = "That Song"
 pp dashboards = mc.get_dashboards
-target_dashboard = dashboards.select{|d| d.urlPath =~ /#{urlPath}/ }.first
+target_dashboard = dashboards.select {|d| d.urlPath =~ /#{urlPath}/ }.first
 mc.get_dashboard(target_dashboard.id)
 pp mc.update_dashboard(target_dashboard.id, new_title, markdown, urlPath)
 

@@ -64,11 +64,11 @@ pp mc.get_metadata(target_host.id, namespace)
 pp mc.delete_metadata(target_host.id, namespace)
 
 # Update the role and the status
-pp mc.update_host_roles(target_host.id, [ "mackerel:web" ])
+pp mc.update_host_roles(target_host.id, ["mackerel:web"])
 pp mc.update_host_status(target_host.id, 'poweroff')
 
 # Update the host
-pp mc.update_host(target_host.id,{
+pp mc.update_host(target_host.id, {
   'name' => 'db001',
   'meta' => {
     'agent-name' => 'mackerel-agent/0.6.1',

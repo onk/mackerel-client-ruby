@@ -29,12 +29,12 @@ RSpec.describe Mackerel::Client do
         "from" => 1484000000,
         "to" => 1484000030,
         "service" => "ExampleService",
-        "roles" => [ "ExampleRole1", "ExampleRole2" ]
+        "roles" => ["ExampleRole1", "ExampleRole2"]
       }
     }
 
     let(:response_object) {
-      Mackerel::Annotation.new( annotation.merge({ 'id' => annotationId }) )
+      Mackerel::Annotation.new(annotation.merge({ 'id' => annotationId }))
     }
 
     before do
@@ -42,7 +42,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully post annotation" do
-      expect(client.post_graph_annotation(annotation).to_h).to eq( annotation.merge({ 'id' => annotationId }) )
+      expect(client.post_graph_annotation(annotation).to_h).to eq(annotation.merge({ 'id' => annotationId }))
     end
   end
 
@@ -63,7 +63,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:api_path) { "/api/v0/graph-annotations"}
+    let(:api_path) { "/api/v0/graph-annotations" }
 
     let(:service) { "ExampleServic" }
     let(:from) { 1484020459 }
@@ -86,7 +86,7 @@ RSpec.describe Mackerel::Client do
             "from" => from,
             "to" => to,
             "service" => service,
-            "roles" => [ "ExampleRole1", "ExampleRole2" ]
+            "roles" => ["ExampleRole1", "ExampleRole2"]
           }
         ]
       }
@@ -122,7 +122,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:api_path) { "/api/v0/graph-annotations/#{id}"}
+    let(:api_path) { "/api/v0/graph-annotations/#{id}" }
 
     let(:id) { "abcdefg" }
     let(:service) { "ExampleServic" }
@@ -147,7 +147,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully update annotation" do
-      expect(client.update_graph_annotation(id, annotation).to_h ).to eq(annotation.merge({"id" => id}))
+      expect(client.update_graph_annotation(id, annotation).to_h).to eq(annotation.merge({ "id" => id }))
     end
   end
 
@@ -168,7 +168,7 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:api_path) { "/api/v0/graph-annotations/#{id}"}
+    let(:api_path) { "/api/v0/graph-annotations/#{id}" }
 
     let(:id) { "abcdefg" }
     let(:service) { "ExampleServic" }
@@ -193,7 +193,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully delete annotation" do
-      expect(client.delete_graph_annotation(id).to_h ).to eq(annotation.merge({"id" => id}))
+      expect(client.delete_graph_annotation(id).to_h).to eq(annotation.merge({ "id" => id }))
     end
   end
 end

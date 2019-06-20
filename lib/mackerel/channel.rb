@@ -25,7 +25,7 @@ module Mackerel
       def get_channels
         command = ApiCommand.new(:get, '/api/v0/channels', @api_key)
         data = command.execute(client)
-        data['channels'].map{|d| Mackerel::Channel.new(d) }
+        data['channels'].map {|d| Mackerel::Channel.new(d) }
       end
     end
   end

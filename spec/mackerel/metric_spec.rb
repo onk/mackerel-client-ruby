@@ -72,8 +72,8 @@ RSpec.describe Mackerel::Client do
       {
         'metrics' => [
           {
-            "time"=>1407898200,
-            "value"=>0.03666666666666667
+            "time" => 1407898200,
+            "value" => 0.03666666666666667
           }
         ]
       }
@@ -115,7 +115,7 @@ RSpec.describe Mackerel::Client do
       {
         "tsdbLatest" => {
           hostId => {
-            metric_name => {"time"=>1407898200, "value"=>0.03666666666666667},
+            metric_name => { "time" => 1407898200, "value" => 0.03666666666666667 },
           }
         }
       }
@@ -230,12 +230,12 @@ RSpec.describe Mackerel::Client do
       end
     }
 
-    let(:graph_def){
+    let(:graph_def) {
       [
         {
           "name" => "custom.cpu.foo",
           "displayName" => "CPU",
-          "unit" =>"percentage",
+          "unit" => "percentage",
           "metrics" => [
             {
               "name" => "custom.cpu.foo.user",
@@ -277,7 +277,7 @@ RSpec.describe Mackerel::Client do
     end
 
     it "successfully post metrics" do
-      expect(client.define_graphs(graph_def)).to eq({"success" => true})
+      expect(client.define_graphs(graph_def)).to eq({ "success" => true })
     end
   end
 end

@@ -50,7 +50,7 @@ module Mackerel
       def get_dashboards
         command = ApiCommand.new(:get, '/api/v0/dashboards', @api_key)
         data = command.execute(client)
-        data['dashboards'].map{ |d| Mackerel::Dashboard.new(d) }
+        data['dashboards'].map {|d| Mackerel::Dashboard.new(d) }
       end
 
       def get_dashboard(dashboardId)

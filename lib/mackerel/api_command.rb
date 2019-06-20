@@ -45,22 +45,22 @@ module Mackerel
       when 200...300
         nil
       when 400
-        message ="Invalid parameter"
+        message = "Invalid parameter"
         raise "#{@method.upcase} #{@path} failed: #{status} #{message}"
       when 403
-        message ="Not authorized"
+        message = "Not authorized"
         raise "#{@method.upcase} #{@path} failed: #{status} #{message}"
       when 404
-        message ="Resource not found"
+        message = "Resource not found"
         raise "#{@method.upcase} #{@path} failed: #{status} #{message}"
       when 409
-        message ="Already exists"
+        message = "Already exists"
         raise "#{@method.upcase} #{@path} failed: #{status} #{message}"
       end
     end
 
     def make_escaped_query
-      @query.map{|k,v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}"}.join("&")
+      @query.map {|k, v| "#{CGI.escape(k.to_s)}=#{CGI.escape(v.to_s)}" }.join("&")
     end
   end
 end

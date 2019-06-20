@@ -76,7 +76,7 @@ module Mackerel
 
       def retire_host(host_id)
         command = ApiCommand.new(:post, "/api/v0/hosts/#{host_id}/retire", @api_key)
-        command.body = { }.to_json
+        command.body = {}.to_json
         command.execute(client)
       end
 
@@ -88,7 +88,7 @@ module Mackerel
         command.params['status']           = opts[:status]  if opts[:status]
         command.params['customIdentifier'] = opts[:customIdentifier] if opts[:customIdentifier]
         data = command.execute(client)
-        data['hosts'].map{ |host_json| Mackerel::Host.new(host_json) }
+        data['hosts'].map {|host_json| Mackerel::Host.new(host_json) }
       end
 
       def get_host_metric_names(host_id)

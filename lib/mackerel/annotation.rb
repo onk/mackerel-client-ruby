@@ -39,7 +39,7 @@ module Mackerel
         command.params['from'] = from
         command.params['to'] = to
         data = command.execute(client)
-        data['graphAnnotations'].map{|a| Mackerel::Annotation.new(a)}
+        data['graphAnnotations'].map {|a| Mackerel::Annotation.new(a) }
       end
 
       def update_graph_annotation(annotation_id, annotation)

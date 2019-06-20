@@ -27,7 +27,7 @@ pp mc.define_graphs([
     "displayName" => "defined_graph",
     "unit" => "percentage",
     "metrics" => [
-      { "name" => "custom.define_graph.example", "displayName" => "Example", "isStacked" => false}
+      { "name" => "custom.define_graph.example", "displayName" => "Example", "isStacked" => false }
     ]
   }
 ])
