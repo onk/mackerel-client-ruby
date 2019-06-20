@@ -23,12 +23,12 @@ pp mc.post_metrics([{
 
 pp mc.define_graphs([
   {
-      "name" => "custom.define_graph",
-      "displayName" => "defined_graph",
-      "unit" => "percentage",
-      "metrics" => [
-         { "name" => "custom.define_graph.example", "displayName" => "Example", "isStacked" => false}
-      ]
+    "name" => "custom.define_graph",
+    "displayName" => "defined_graph",
+    "unit" => "percentage",
+    "metrics" => [
+      { "name" => "custom.define_graph.example", "displayName" => "Example", "isStacked" => false}
+    ]
   }
 ])
 

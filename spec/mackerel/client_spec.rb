@@ -130,9 +130,9 @@ RSpec.describe Mackerel::Client do
           'mackerel' => ['db']
         ],
         'interfaces' => [{
-            "ipAddress"   => "10.0.0.1",
-            "macAddress"  => "08:00:27:ce:08:3d",
-            "name"        => "eth0"
+          "ipAddress" => "10.0.0.1",
+          "macAddress" => "08:00:27:ce:08:3d",
+          "name" => "eth0"
         }],
       )
     }
@@ -202,9 +202,9 @@ RSpec.describe Mackerel::Client do
     let(:api_path) { "/api/v0/hosts/#{hostId}/role-fullnames" }
 
     let(:roles) {
-        [
-          'Web', 'Linux', 'NetworkG1'
-        ]
+      [
+        'Web', 'Linux', 'NetworkG1'
+      ]
     }
 
     let(:response_object) {
@@ -277,30 +277,31 @@ RSpec.describe Mackerel::Client do
       { 'success' => true }
     }
 
-    let(:defs) { [
-      {
-        name: 'custom.fish-catch',
-        displayName: 'My fish catch',
-        unit: 'integer',
-        metrics: [
-          {
-            name: 'custom.fish-catch.mackerel',
-            displayName: 'Mackerel',
-            isStacked: false,
-          },
-          {
-            name: 'custom.fish-catch.herring',
-            displayName: 'Herring',
-            isStacked: false,
-          },
-          {
-            name: 'custom.fish-catch.salmon',
-            displayName: 'Salmon',
-            isStacked: false,
-          },
-        ]
-      }
-    ]
+    let(:defs) {
+      [
+        {
+          name: 'custom.fish-catch',
+          displayName: 'My fish catch',
+          unit: 'integer',
+          metrics: [
+            {
+              name: 'custom.fish-catch.mackerel',
+              displayName: 'Mackerel',
+              isStacked: false,
+            },
+            {
+              name: 'custom.fish-catch.herring',
+              displayName: 'Herring',
+              isStacked: false,
+            },
+            {
+              name: 'custom.fish-catch.salmon',
+              displayName: 'Salmon',
+              isStacked: false,
+            },
+          ]
+        }
+      ]
     }
 
     before do
@@ -352,9 +353,9 @@ RSpec.describe Mackerel::Client do
             'mackerel' => ['db']
           ],
           'interfaces' => [{
-              "ipAddress"   => "10.0.0.1",
-              "macAddress"  => "08:00:27:ce:08:3d",
-              "name"        => "eth0"
+            "ipAddress" => "10.0.0.1",
+            "macAddress" => "08:00:27:ce:08:3d",
+            "name" => "eth0"
           }],
         )
       ]

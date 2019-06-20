@@ -29,9 +29,9 @@ RSpec.describe Mackerel::Client do
             "email" => "hogehoge-exmaple@example.com"
           },
           {
-             "id" => "YkLBo38",
-             "screenName" => "DBServer",
-             "email" => "fugafuga-exmaple@example.com"
+            "id" => "YkLBo38",
+            "screenName" => "DBServer",
+            "email" => "fugafuga-exmaple@example.com"
           }
         ]
       }

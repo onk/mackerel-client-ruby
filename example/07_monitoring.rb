@@ -51,8 +51,7 @@ pp mc.update_monitor(monitor.id , {
 
 pp channels = mc.get_channels().first
 
-pp notification_group = mc.post_notification_group(
-{
+pp notification_group = mc.post_notification_group({
   name: "Example notification group",
   notificationLevel: "all",
   childNotificationGroupIds: [],
@@ -70,8 +69,7 @@ pp notification_group = mc.post_notification_group(
       name: "mackerel"
     }
   ]
-}
-)
+})
 
 pp mc.update_notification_group(notification_group.id,{
   name: "Example notification group(updated)",
@@ -91,8 +89,7 @@ pp mc.update_notification_group(notification_group.id,{
       name: "mackerel"
     }
   ]
-}
-)
+})
 
 pp mc.get_notification_groups()
 mc.delete_notification_group(notification_group.id)

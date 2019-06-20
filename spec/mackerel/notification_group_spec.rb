@@ -49,7 +49,7 @@ RSpec.describe Mackerel::Client do
     }
 
     let(:response_object) {
-       notificationGroup.merge({'id' => notificationGroupId})
+      notificationGroup.merge({'id' => notificationGroupId})
     }
 
     before do

@@ -27,10 +27,11 @@ RSpec.describe Mackerel::Client do
       { 'success' => true }
     }
 
-    let(:metrics) { [
+    let(:metrics) {
+      [
         { 'hostId' => hostId, 'name' => 'custom.metrics.loadavg', 'time' => 1401537844, 'value' => 1.4 },
-        { 'hostId' => hostId, 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ]
+        { 'hostId' => hostId, 'name' => 'custom.metrics.uptime', 'time' => 1401537844, 'value' => 500 },
+      ]
     }
 
     before do
@@ -45,9 +46,9 @@ RSpec.describe Mackerel::Client do
   describe "#get_host_metrics" do
     let(:stubbed_response) {
       [
-       200,
-       {},
-       JSON.dump(response_object)
+        200,
+        {},
+        JSON.dump(response_object)
       ]
     }
 
@@ -90,9 +91,9 @@ RSpec.describe Mackerel::Client do
   describe "#get_latest_metrics" do
     let(:stubbed_response) {
       [
-       200,
-       {},
-       JSON.dump(response_object)
+        200,
+        {},
+        JSON.dump(response_object)
       ]
     }
 
@@ -154,10 +155,11 @@ RSpec.describe Mackerel::Client do
       { 'success' => true }
     }
 
-    let(:metrics) { [
+    let(:metrics) {
+      [
         { 'name' => 'custom.metrics.latency', 'time' => 1401537844, 'value' => 0.5 },
-        { 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ]
+        { 'name' => 'custom.metrics.uptime', 'time' => 1401537844, 'value' => 500 },
+      ]
     }
 
     before do
@@ -195,10 +197,11 @@ RSpec.describe Mackerel::Client do
       { 'metrics' => metrics }
     }
 
-    let(:metrics) { [
+    let(:metrics) {
+      [
         { 'name' => 'custom.metrics.loadavg', 'time' => 1401537844, 'value' => 1.4 },
-        { 'name' => 'custom.metrics.uptime',  'time' => 1401537844, 'value' => 500 },
-    ]
+        { 'name' => 'custom.metrics.uptime', 'time' => 1401537844, 'value' => 500 },
+      ]
     }
 
     before do
@@ -213,9 +216,9 @@ RSpec.describe Mackerel::Client do
   describe "#define_graphs" do
     let(:stubbed_response) {
       [
-       200,
-       {},
-       JSON.dump(response_object)
+        200,
+        {},
+        JSON.dump(response_object)
       ]
     }
 
@@ -235,14 +238,14 @@ RSpec.describe Mackerel::Client do
           "unit" =>"percentage",
           "metrics" => [
             {
-               "name" => "custom.cpu.foo.user",
-               "displayName" => "CPU user",
-               "isStacked" => true
+              "name" => "custom.cpu.foo.user",
+              "displayName" => "CPU user",
+              "isStacked" => true
             },
             {
-               "name" => "custom.cpu.foo.idle",
-               "displayName" => "CPU idle",
-               "isStacked" => true
+              "name" => "custom.cpu.foo.idle",
+              "displayName" => "CPU idle",
+              "isStacked" => true
             }
           ]
         },

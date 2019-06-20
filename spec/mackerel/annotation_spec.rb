@@ -70,26 +70,26 @@ RSpec.describe Mackerel::Client do
     let(:to) { 1484020759 }
     let(:annotations) {
       {
-         "graphAnnotations" => [
-            {
-               "id" => "2UdH1QcZQaw",
-               "title" => "Deploy application",
-               "description" => "Deploy description",
-               "from" => from,
-               "to" => to,
-               "service" => service
-            },
-            {
-               "id" => "2UdH1QuiGgj",
-               "title" => "Release application",
-               "description" => "Release description",
-               "from" => from,
-               "to" => to,
-               "service" => service,
-               "roles" => [ "ExampleRole1", "ExampleRole2" ]
-            }
-         ]
-       }
+        "graphAnnotations" => [
+          {
+            "id" => "2UdH1QcZQaw",
+            "title" => "Deploy application",
+            "description" => "Deploy description",
+            "from" => from,
+            "to" => to,
+            "service" => service
+          },
+          {
+            "id" => "2UdH1QuiGgj",
+            "title" => "Release application",
+            "description" => "Release description",
+            "from" => from,
+            "to" => to,
+            "service" => service,
+            "roles" => [ "ExampleRole1", "ExampleRole2" ]
+          }
+        ]
+      }
     }
 
     let(:response_object) {
@@ -130,11 +130,11 @@ RSpec.describe Mackerel::Client do
     let(:to) { 1484020759 }
     let(:annotation) {
       {
-         "title" => "Deploy application",
-         "description" => "Deploy description",
-         "from" => from,
-         "to" => to,
-         "service" => service
+        "title" => "Deploy application",
+        "description" => "Deploy description",
+        "from" => from,
+        "to" => to,
+        "service" => service
       }
     }
 
@@ -176,11 +176,11 @@ RSpec.describe Mackerel::Client do
     let(:to) { 1484020759 }
     let(:annotation) {
       {
-         "title" => "Deploy application",
-         "description" => "Deploy description",
-         "from" => from,
-         "to" => to,
-         "service" => service
+        "title" => "Deploy application",
+        "description" => "Deploy description",
+        "from" => from,
+        "to" => to,
+        "service" => service
       }
     }
 

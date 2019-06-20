@@ -32,12 +32,12 @@ RSpec.describe Mackerel::Client do
             ]
           },
           {
-             "name" => "Web",
-             "memo" => "store",
-             "roles" => [
-               "a role",
-               "the role"
-             ]
+            "name" => "Web",
+            "memo" => "store",
+            "roles" => [
+              "a role",
+              "the role"
+            ]
           }
         ]
       }
@@ -83,8 +83,8 @@ RSpec.describe Mackerel::Client do
             "memo" => "Apache2.2",
           },
           {
-             "name" => "DB",
-             "memo" => "Relational Database",
+            "name" => "DB",
+            "memo" => "Relational Database",
           }
         ]
       }
@@ -125,7 +125,7 @@ RSpec.describe Mackerel::Client do
     let(:metricNames) {
       {
         "names" => [
-            "CPU","Memory","Filesystem"
+          "CPU","Memory","Filesystem"
         ]
       }
     }

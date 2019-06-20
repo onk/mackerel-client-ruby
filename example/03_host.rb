@@ -23,9 +23,9 @@ pp mc.post_host({
     'mackerel:web'
   ],
   'interfaces' => [{
-      "ipAddress"   => "10.1.1.1",
-      "macAddress"  => "08:00:27:ce:08:3d",
-      "name"        => "eth0"
+    "ipAddress" => "10.1.1.1",
+    "macAddress" => "08:00:27:ce:08:3d",
+    "name" => "eth0"
   }]
 })
 pp mc.post_host({
@@ -44,9 +44,9 @@ pp mc.post_host({
     'mackerel:db'
   ],
   'interfaces' => [{
-      "ipAddress"   => "10.0.0.1",
-      "macAddress"  => "08:00:27:ce:08:3d",
-      "name"        => "eth0"
+    "ipAddress" => "10.0.0.1",
+    "macAddress" => "08:00:27:ce:08:3d",
+    "name" => "eth0"
   }]
 })
 
@@ -85,9 +85,9 @@ pp mc.update_host(target_host.id,{
     'mackerel:db'
   ],
   'interfaces' => [{
-      "ipAddress"   => "10.0.0.1",
-      "macAddress"  => "08:00:27:ce:08:3d",
-      "name"        => "eth0"
+    "ipAddress" => "10.0.0.1",
+    "macAddress" => "08:00:27:ce:08:3d",
+    "name" => "eth0"
   }]
 })
 

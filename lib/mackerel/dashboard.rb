@@ -28,9 +28,9 @@ module Mackerel
       def post_dashboard(title, markdown, urlPath)
         command = ApiCommand.new(:post, '/api/v0/dashboards', @api_key)
         command.body = {
-            title: title,
-            bodyMarkdown: markdown,
-            urlPath: urlPath
+          title: title,
+          bodyMarkdown: markdown,
+          urlPath: urlPath
         }.to_json
         data = command.execute(client)
         Mackerel::Dashboard.new(data)
@@ -39,9 +39,9 @@ module Mackerel
       def update_dashboard(dashboardId, title, markdown, urlPath)
         command = ApiCommand.new(:put, "/api/v0/dashboards/#{dashboardId}", @api_key)
         command.body = {
-            title: title,
-            bodyMarkdown: markdown,
-            urlPath: urlPath
+          title: title,
+          bodyMarkdown: markdown,
+          urlPath: urlPath
         }.to_json
         data = command.execute(client)
         Mackerel::Dashboard.new(data)
