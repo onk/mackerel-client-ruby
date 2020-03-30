@@ -42,6 +42,8 @@ module Mackerel
       rescue JSON::ParserError
         # raise Mackerel::Error with original response body
         raise Mackerel::Error, "#{@method.upcase} #{@path} failed: #{e.response[:status]} #{e.response[:body]}"
+      else
+        raise e
       end
     end
 
